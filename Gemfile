@@ -1,4 +1,5 @@
 source "https://rubygems.org"
 
-gem 'bigdecimal', '~> 3.1.8'
+ruby "2.7.2"
+gem 'bigdecimal', '~> 2.7.2'
 gem "jekyll"

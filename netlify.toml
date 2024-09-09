@@ -1,9 +1,9 @@
 [build]
-  command = "sudo apt-get update && sudo apt-get install -y build-essential && bundle install && jekyll build"
+  command = "bundle install && jekyll build"
   publish = "_site"
 
 [build.environment]
-  RUBY_VERSION = "3.3.4"
+  RUBY_VERSION = "2.7.2"
 
 [[plugins]]
   package = "netlify-plugin-ruby-dependencies"
