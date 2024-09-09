@@ -136,8 +136,8 @@
 <span class="na">markdown</span><span class="pi">:</span> <span class="s">kramdown</span>
 <span class="na">kramdown</span><span class="pi">:</span>
  <span class="na">input</span><span class="pi">:</span> <span class="s">GFM</span>
- <span class="na">auto_ids</span><span class="pi">:</span> <span class="no">true</span>
- <span class="na">hard_wrap</span><span class="pi">:</span> <span class="no">false</span>
+ <span class="na">auto_ids</span><span class="pi">:</span> <span class="kc">true</span>
+ <span class="na">hard_wrap</span><span class="pi">:</span> <span class="kc">false</span>
  <span class="na">syntax_highlighter</span><span class="pi">:</span> <span class="s">rouge</span>
 </code></pre></div></div>
 

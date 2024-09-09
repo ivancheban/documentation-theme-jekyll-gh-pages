@@ -1,4 +1,4 @@
-I"¼<h2 id="using-series-for-pages">Using series for pages</h2>
+I"À<h2 id="using-series-for-pages">Using series for pages</h2>
 
 <p>You create a series by looking for all pages within a tag namespace that contain certain frontmatter. Hereâ€™s a <a href="mydoc_seriesdemo1.html">demo</a>.</p>
 
@@ -71,11 +71,11 @@
 
 <div class="language-liquid highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!-- your frontmatter goes here --&gt;
 
-<span class="p">{%</span><span class="w"> </span><span class="nt">include</span><span class="w"> </span>custom/series_acme.html<span class="w"> </span><span class="p">%}</span>
+<span class="cp">{%</span><span class="w"> </span><span class="nt">include</span><span class="w"> </span>custom/series_acme.html<span class="w"> </span><span class="cp">%}</span>
 
 &lt;!-- your page content goes here ... --&gt;
 
-<span class="p">{%</span><span class="w"> </span><span class="nt">include</span><span class="w"> </span>custom/series_acme_next.html<span class="w"> </span><span class="p">%}</span>
+<span class="cp">{%</span><span class="w"> </span><span class="nt">include</span><span class="w"> </span>custom/series_acme_next.html<span class="w"> </span><span class="cp">%}</span>
 </code></pre></div></div>
 
 <h2 id="changing-the-series-drop-down-color">Changing the series drop-down color</h2>

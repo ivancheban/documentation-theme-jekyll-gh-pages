@@ -106,8 +106,8 @@ permalink: mydoc_alerts
     <span class="na">type</span><span class="pi">:</span> <span class="s2">"</span><span class="s">pages"</span>
   <span class="na">values</span><span class="pi">:</span>
     <span class="na">layout</span><span class="pi">:</span> <span class="s2">"</span><span class="s">page"</span>
-    <span class="na">comments</span><span class="pi">:</span> <span class="no">true</span>
-    <span class="na">search</span><span class="pi">:</span> <span class="no">true</span>
+    <span class="na">comments</span><span class="pi">:</span> <span class="kc">true</span>
+    <span class="na">search</span><span class="pi">:</span> <span class="kc">true</span>
     <span class="na">sidebar</span><span class="pi">:</span> <span class="s">home_sidebar</span>
     <span class="na">topnav</span><span class="pi">:</span> <span class="s">topnav</span>
 </code></pre></div></div>
@@ -147,8 +147,8 @@ permalink: mydoc_alerts
     <span class="na">type</span><span class="pi">:</span> <span class="s2">"</span><span class="s">pages"</span>
   <span class="na">values</span><span class="pi">:</span>
     <span class="na">layout</span><span class="pi">:</span> <span class="s2">"</span><span class="s">page"</span>
-    <span class="na">comments</span><span class="pi">:</span> <span class="no">true</span>
-    <span class="na">search</span><span class="pi">:</span> <span class="no">true</span>
+    <span class="na">comments</span><span class="pi">:</span> <span class="kc">true</span>
+    <span class="na">search</span><span class="pi">:</span> <span class="kc">true</span>
     <span class="na">sidebar</span><span class="pi">:</span> <span class="s">home_sidebar</span>
     <span class="na">topnav</span><span class="pi">:</span> <span class="s">topnav</span>
 </code></pre></div></div>

@@ -1,4 +1,4 @@
-I"—A<h2 id="add-a-tag-to-a-page">Add a tag to a page</h2>
+I"ŠB<h2 id="add-a-tag-to-a-page">Add a tag to a page</h2>
 <p>You can add tags to pages by adding <code class="language-plaintext highlighter-rouge">tags</code> in the frontmatter with values inside brackets, like this:</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---
@@ -50,7 +50,7 @@ search: exclude
 permalink: tag_collaboration.html
 sidebar: mydoc_sidebar
 ---
-<span class="p">{%</span><span class="w"> </span><span class="nt">include</span><span class="w"> </span>taglogic.html<span class="w"> </span><span class="p">%}</span>
+<span class="cp">{%</span><span class="w"> </span><span class="nt">include</span><span class="w"> </span>taglogic.html<span class="w"> </span><span class="cp">%}</span>
 </code></pre></div>    </div>
 
     <div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> In the _includes/mydoc folder, thereâ€™s a taglogic.html file. This file (included in each tag archive file) has common logic for getting the tags and listing out the pages containing the tag in a table with summaries or truncated excerpts. You donâ€™t have to do anything with the file â€” just leave it there because the tag archive pages reference it.</div>
@@ -63,15 +63,15 @@ sidebar: mydoc_sidebar
 </ol>
 
 <div class="language-liquid highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;div class="tags"&gt;
-<span class="p">{%</span><span class="w"> </span><span class="kr">if</span><span class="w"> </span><span class="nv">page</span><span class="p">.</span><span class="nv">tags</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="nv">null</span><span class="w"> </span><span class="p">%}</span>
+<span class="cp">{%</span><span class="w"> </span><span class="nt">if</span><span class="w"> </span><span class="nv">page</span><span class="p">.</span><span class="nv">tags</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="nv">null</span><span class="w"> </span><span class="cp">%}</span>
 &lt;b&gt;Tags: &lt;/b&gt;
-<span class="p">{%</span><span class="w"> </span><span class="nt">assign</span><span class="w"> </span><span class="nv">projectTags</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">site</span><span class="p">.</span><span class="nv">data</span><span class="p">.</span><span class="nv">tags</span><span class="p">.</span><span class="nv">allowed-tags</span><span class="w"> </span><span class="p">%}</span>
-<span class="p">{%</span><span class="w"> </span><span class="nt">for</span><span class="w"> </span><span class="nv">tag</span><span class="w"> </span><span class="nt">in</span><span class="w"> </span><span class="nv">page.tags</span><span class="w"> </span><span class="p">%}</span>
-<span class="p">{%</span><span class="w"> </span><span class="kr">if</span><span class="w"> </span><span class="nv">projectTags</span><span class="w"> </span><span class="ow">contains</span><span class="w"> </span><span class="nv">tag</span><span class="w"> </span><span class="p">%}</span>
-&lt;a href="<span class="p">{{</span><span class="w"> </span><span class="s2">"tag_"</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">append</span><span class="p">:</span><span class="w"> </span><span class="nv">tag</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">append</span><span class="p">:</span><span class="w"> </span><span class="s2">".html"</span><span class="w"> </span><span class="p">}}</span>" class="btn btn-default navbar-btn cursorNorm" role="button"&gt;<span class="p">{{</span><span class="nv">page</span><span class="p">.</span><span class="nv">tagName</span><span class="p">}}{{</span><span class="nv">tag</span><span class="p">}}</span>&lt;/a&gt;
-<span class="p">{%</span><span class="w"> </span><span class="kr">endif</span><span class="w"> </span><span class="p">%}</span>
-<span class="p">{%</span><span class="w"> </span><span class="nt">endfor</span><span class="w"> </span><span class="p">%}</span>
-<span class="p">{%</span><span class="w"> </span><span class="kr">endif</span><span class="w"> </span><span class="p">%}</span>
+<span class="cp">{%</span><span class="w"> </span><span class="nt">assign</span><span class="w"> </span><span class="nv">projectTags</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">site</span><span class="p">.</span><span class="nv">data</span><span class="p">.</span><span class="nv">tags</span><span class="p">.</span><span class="nv">allowed-tags</span><span class="w"> </span><span class="cp">%}</span>
+<span class="cp">{%</span><span class="w"> </span><span class="nt">for</span><span class="w"> </span><span class="nv">tag</span><span class="w"> </span><span class="nt">in</span><span class="w"> </span><span class="nv">page</span><span class="p">.</span><span class="nv">tags</span><span class="w"> </span><span class="cp">%}</span>
+<span class="cp">{%</span><span class="w"> </span><span class="nt">if</span><span class="w"> </span><span class="nv">projectTags</span><span class="w"> </span><span class="ow">contains</span><span class="w"> </span><span class="nv">tag</span><span class="w"> </span><span class="cp">%}</span>
+&lt;a href="<span class="cp">{{</span><span class="w"> </span><span class="s2">"tag_"</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">append</span><span class="p">:</span><span class="w"> </span><span class="nv">tag</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">append</span><span class="p">:</span><span class="w"> </span><span class="s2">".html"</span><span class="w"> </span><span class="cp">}}</span>" class="btn btn-default navbar-btn cursorNorm" role="button"&gt;<span class="cp">{{</span><span class="nv">page</span><span class="p">.</span><span class="nv">tagName</span><span class="cp">}}{{</span><span class="nv">tag</span><span class="cp">}}</span>&lt;/a&gt;
+<span class="cp">{%</span><span class="w"> </span><span class="nt">endif</span><span class="w"> </span><span class="cp">%}</span>
+<span class="cp">{%</span><span class="w"> </span><span class="nt">endfor</span><span class="w"> </span><span class="cp">%}</span>
+<span class="cp">{%</span><span class="w"> </span><span class="nt">endif</span><span class="w"> </span><span class="cp">%}</span>
 &lt;/div&gt;
 </code></pre></div></div>
 
@@ -85,13 +85,13 @@ sidebar: mydoc_sidebar
 
 <div class="language-liquid highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Getting started pages:
 &lt;ul&gt;
-<span class="p">{%</span><span class="w"> </span><span class="nt">for</span><span class="w"> </span><span class="nv">page</span><span class="w"> </span><span class="nt">in</span><span class="w"> </span><span class="nv">site.pages</span><span class="w"> </span><span class="p">%}</span>
-<span class="p">{%</span><span class="w"> </span><span class="nt">for</span><span class="w"> </span><span class="nv">tag</span><span class="w"> </span><span class="nt">in</span><span class="w"> </span><span class="nv">page.tags</span><span class="w"> </span><span class="p">%}</span>
-<span class="p">{%</span><span class="w"> </span><span class="kr">if</span><span class="w"> </span><span class="nv">tag</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">"getting_started"</span><span class="w"> </span><span class="p">%}</span>
-&lt;li&gt;&lt;a href="<span class="p">{{</span><span class="nv">page</span><span class="p">.</span><span class="nv">url</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">remove</span><span class="p">:</span><span class="w"> </span><span class="s2">"/"</span><span class="w"> </span><span class="p">}}</span>"&gt;<span class="p">{{</span><span class="nv">page</span><span class="p">.</span><span class="nv">title</span><span class="p">}}</span>&lt;/a&gt;&lt;/li&gt;
-<span class="p">{%</span><span class="w"> </span><span class="kr">endif</span><span class="w"> </span><span class="p">%}</span>
-<span class="p">{%</span><span class="w"> </span><span class="nt">endfor</span><span class="w"> </span><span class="p">%}</span>
-<span class="p">{%</span><span class="w"> </span><span class="nt">endfor</span><span class="w"> </span><span class="p">%}</span>
+<span class="cp">{%</span><span class="w"> </span><span class="nt">for</span><span class="w"> </span><span class="nv">page</span><span class="w"> </span><span class="nt">in</span><span class="w"> </span><span class="nv">site</span><span class="p">.</span><span class="nv">pages</span><span class="w"> </span><span class="cp">%}</span>
+<span class="cp">{%</span><span class="w"> </span><span class="nt">for</span><span class="w"> </span><span class="nv">tag</span><span class="w"> </span><span class="nt">in</span><span class="w"> </span><span class="nv">page</span><span class="p">.</span><span class="nv">tags</span><span class="w"> </span><span class="cp">%}</span>
+<span class="cp">{%</span><span class="w"> </span><span class="nt">if</span><span class="w"> </span><span class="nv">tag</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">"getting_started"</span><span class="w"> </span><span class="cp">%}</span>
+&lt;li&gt;&lt;a href="<span class="cp">{{</span><span class="nv">page</span><span class="p">.</span><span class="nv">url</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">remove</span><span class="p">:</span><span class="w"> </span><span class="s2">"/"</span><span class="w"> </span><span class="cp">}}</span>"&gt;<span class="cp">{{</span><span class="nv">page</span><span class="p">.</span><span class="nv">title</span><span class="cp">}}</span>&lt;/a&gt;&lt;/li&gt;
+<span class="cp">{%</span><span class="w"> </span><span class="nt">endif</span><span class="w"> </span><span class="cp">%}</span>
+<span class="cp">{%</span><span class="w"> </span><span class="nt">endfor</span><span class="w"> </span><span class="cp">%}</span>
+<span class="cp">{%</span><span class="w"> </span><span class="nt">endfor</span><span class="w"> </span><span class="cp">%}</span>
 &lt;/ul&gt;
 </code></pre></div></div>
 
@@ -449,14 +449,14 @@ sidebar: mydoc_sidebar
 <div class="language-liquid highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
 Getting started pages:
 &lt;ul&gt;
-<span class="p">{%</span><span class="w"> </span><span class="nt">assign</span><span class="w"> </span><span class="nv">sorted_pages</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">site</span><span class="p">.</span><span class="nv">pages</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">sort</span><span class="p">:</span><span class="w"> </span><span class="s1">'title'</span><span class="w"> </span><span class="p">%}</span>
-<span class="p">{%</span><span class="w"> </span><span class="nt">for</span><span class="w"> </span><span class="nv">page</span><span class="w"> </span><span class="nt">in</span><span class="w"> </span><span class="nv">sorted_pages</span><span class="w"> </span><span class="p">%}</span>
-<span class="p">{%</span><span class="w"> </span><span class="nt">for</span><span class="w"> </span><span class="nv">tag</span><span class="w"> </span><span class="nt">in</span><span class="w"> </span><span class="nv">page.tags</span><span class="w"> </span><span class="p">%}</span>
-<span class="p">{%</span><span class="w"> </span><span class="kr">if</span><span class="w"> </span><span class="nv">tag</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">"getting_started"</span><span class="w"> </span><span class="p">%}</span>
-&lt;li&gt;&lt;a href="<span class="p">{{</span><span class="nv">page</span><span class="p">.</span><span class="nv">url</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">remove</span><span class="p">:</span><span class="w"> </span><span class="s2">"/"</span><span class="w"> </span><span class="p">}}</span>"&gt;<span class="p">{{</span><span class="nv">page</span><span class="p">.</span><span class="nv">title</span><span class="p">}}</span>&lt;/a&gt;&lt;/li&gt;
-<span class="p">{%</span><span class="w"> </span><span class="kr">endif</span><span class="w"> </span><span class="p">%}</span>
-<span class="p">{%</span><span class="w"> </span><span class="nt">endfor</span><span class="w"> </span><span class="p">%}</span>
-<span class="p">{%</span><span class="w"> </span><span class="nt">endfor</span><span class="w"> </span><span class="p">%}</span>
+<span class="cp">{%</span><span class="w"> </span><span class="nt">assign</span><span class="w"> </span><span class="nv">sorted_pages</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">site</span><span class="p">.</span><span class="nv">pages</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">sort</span><span class="p">:</span><span class="w"> </span><span class="s1">'title'</span><span class="w"> </span><span class="cp">%}</span>
+<span class="cp">{%</span><span class="w"> </span><span class="nt">for</span><span class="w"> </span><span class="nv">page</span><span class="w"> </span><span class="nt">in</span><span class="w"> </span><span class="nv">sorted_pages</span><span class="w"> </span><span class="cp">%}</span>
+<span class="cp">{%</span><span class="w"> </span><span class="nt">for</span><span class="w"> </span><span class="nv">tag</span><span class="w"> </span><span class="nt">in</span><span class="w"> </span><span class="nv">page</span><span class="p">.</span><span class="nv">tags</span><span class="w"> </span><span class="cp">%}</span>
+<span class="cp">{%</span><span class="w"> </span><span class="nt">if</span><span class="w"> </span><span class="nv">tag</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">"getting_started"</span><span class="w"> </span><span class="cp">%}</span>
+&lt;li&gt;&lt;a href="<span class="cp">{{</span><span class="nv">page</span><span class="p">.</span><span class="nv">url</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">remove</span><span class="p">:</span><span class="w"> </span><span class="s2">"/"</span><span class="w"> </span><span class="cp">}}</span>"&gt;<span class="cp">{{</span><span class="nv">page</span><span class="p">.</span><span class="nv">title</span><span class="cp">}}</span>&lt;/a&gt;&lt;/li&gt;
+<span class="cp">{%</span><span class="w"> </span><span class="nt">endif</span><span class="w"> </span><span class="cp">%}</span>
+<span class="cp">{%</span><span class="w"> </span><span class="nt">endfor</span><span class="w"> </span><span class="cp">%}</span>
+<span class="cp">{%</span><span class="w"> </span><span class="nt">endfor</span><span class="w"> </span><span class="cp">%}</span>
 &lt;/ul&gt;
 
 </code></pre></div></div>

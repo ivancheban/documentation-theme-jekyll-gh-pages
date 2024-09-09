@@ -1,4 +1,4 @@
-I"Qk<style>
+I"�m<style>
 .result {
 background-color: #f0f0f0;
 border: 1px solid #dedede;
@@ -53,8 +53,8 @@ margin-bottom: 10px;
 
 <p><strong>Markdown + Liquid:</strong></p>
 
-<div class="language-liquid highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;p&gt;Husband's name: <span class="p">{{</span><span class="nv">site</span><span class="p">.</span><span class="nv">data</span><span class="p">.</span><span class="nv">samplelist</span><span class="p">.</span><span class="nv">name</span><span class="p">.</span><span class="nv">husband</span><span class="p">}}</span>&lt;/p&gt;
-&lt;p&gt;Wife's name: <span class="p">{{</span><span class="nv">site</span><span class="p">.</span><span class="nv">data</span><span class="p">.</span><span class="nv">samplelist</span><span class="p">.</span><span class="nv">name</span><span class="p">.</span><span class="nv">wife</span><span class="p">}}</span>&lt;/p&gt;
+<div class="language-liquid highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;p&gt;Husband's name: <span class="cp">{{</span><span class="nv">site</span><span class="p">.</span><span class="nv">data</span><span class="p">.</span><span class="nv">samplelist</span><span class="p">.</span><span class="nv">name</span><span class="p">.</span><span class="nv">husband</span><span class="cp">}}</span>&lt;/p&gt;
+&lt;p&gt;Wife's name: <span class="cp">{{</span><span class="nv">site</span><span class="p">.</span><span class="nv">data</span><span class="p">.</span><span class="nv">samplelist</span><span class="p">.</span><span class="nv">name</span><span class="p">.</span><span class="nv">wife</span><span class="cp">}}</span>&lt;/p&gt;
 </code></pre></div></div>
 
 <p>Notice that in order to access the data file, you use <code class="language-plaintext highlighter-rouge">site.data.samplelist</code> where as <code class="language-plaintext highlighter-rouge">samplelist</code> is the name of the YAML file.</p>
@@ -86,10 +86,10 @@ margin-bottom: 10px;
 <p><strong>Markdown:</strong></p>
 
 <div class="language-liquid highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;p&gt;&lt;b&gt;Feedback&lt;/b&gt;&lt;/p&gt;
-&lt;p&gt;<span class="p">{{</span><span class="nv">site</span><span class="p">.</span><span class="nv">data</span><span class="p">.</span><span class="nv">samplelist</span><span class="p">.</span><span class="nv">feedback</span><span class="p">}}</span>&lt;/p&gt;
+&lt;p&gt;<span class="cp">{{</span><span class="nv">site</span><span class="p">.</span><span class="nv">data</span><span class="p">.</span><span class="nv">samplelist</span><span class="p">.</span><span class="nv">feedback</span><span class="cp">}}</span>&lt;/p&gt;
 
 &lt;p&gt;&lt;b&gt;Block&lt;/b&gt;&lt;/p&gt;
-&lt;p&gt;<span class="p">{{</span><span class="nv">site</span><span class="p">.</span><span class="nv">data</span><span class="p">.</span><span class="nv">samplelist</span><span class="p">.</span><span class="nv">block</span><span class="p">}}</span>&lt;/p&gt;
+&lt;p&gt;<span class="cp">{{</span><span class="nv">site</span><span class="p">.</span><span class="nv">data</span><span class="p">.</span><span class="nv">samplelist</span><span class="p">.</span><span class="nv">block</span><span class="cp">}}</span>&lt;/p&gt;
 </code></pre></div></div>
 
 <p><strong>Result:</strong></p>
@@ -126,9 +126,9 @@ since you can format the code samples with
 <p><strong>Markdown + Liquid:</strong></p>
 
 <div class="language-liquid highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;ul&gt;
-<span class="p">{%</span><span class="w"> </span><span class="nt">for</span><span class="w"> </span><span class="nv">item</span><span class="w"> </span><span class="nt">in</span><span class="w"> </span><span class="nv">site.data.samplelist.bikes</span><span class="w"> </span><span class="p">%}</span>
-&lt;li&gt;<span class="p">{{</span><span class="nv">item</span><span class="p">.</span><span class="nv">title</span><span class="p">}}</span>&lt;/li&gt;
-<span class="p">{%</span><span class="w"> </span><span class="nt">endfor</span><span class="w"> </span><span class="p">%}</span>
+<span class="cp">{%</span><span class="w"> </span><span class="nt">for</span><span class="w"> </span><span class="nv">item</span><span class="w"> </span><span class="nt">in</span><span class="w"> </span><span class="nv">site</span><span class="p">.</span><span class="nv">data</span><span class="p">.</span><span class="nv">samplelist</span><span class="p">.</span><span class="nv">bikes</span><span class="w"> </span><span class="cp">%}</span>
+&lt;li&gt;<span class="cp">{{</span><span class="nv">item</span><span class="p">.</span><span class="nv">title</span><span class="cp">}}</span>&lt;/li&gt;
+<span class="cp">{%</span><span class="w"> </span><span class="nt">endfor</span><span class="w"> </span><span class="cp">%}</span>
 &lt;/ul&gt;
 </code></pre></div></div>
 
@@ -217,14 +217,14 @@ since you can format the code samples with
 
 <p><strong>Markdown + Liquid:</strong></p>
 
-<div class="language-liquid highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{%</span><span class="w"> </span><span class="nt">for</span><span class="w"> </span><span class="nv">item</span><span class="w"> </span><span class="nt">in</span><span class="w"> </span><span class="nv">site.data.samplelist.toc</span><span class="w"> </span><span class="p">%}</span>
-&lt;h3&gt;<span class="p">{{</span><span class="nv">item</span><span class="p">.</span><span class="nv">title</span><span class="p">}}</span>&lt;/h3&gt;
+<div class="language-liquid highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">{%</span><span class="w"> </span><span class="nt">for</span><span class="w"> </span><span class="nv">item</span><span class="w"> </span><span class="nt">in</span><span class="w"> </span><span class="nv">site</span><span class="p">.</span><span class="nv">data</span><span class="p">.</span><span class="nv">samplelist</span><span class="p">.</span><span class="nv">toc</span><span class="w"> </span><span class="cp">%}</span>
+&lt;h3&gt;<span class="cp">{{</span><span class="nv">item</span><span class="p">.</span><span class="nv">title</span><span class="cp">}}</span>&lt;/h3&gt;
 &lt;ul&gt;
-<span class="p">{%</span><span class="w"> </span><span class="nt">for</span><span class="w"> </span><span class="nv">entry</span><span class="w"> </span><span class="nt">in</span><span class="w"> </span><span class="nv">item.subfolderitems</span><span class="w"> </span><span class="p">%}</span>
-&lt;li&gt;<span class="p">{{</span><span class="nv">entry</span><span class="p">.</span><span class="nv">page</span><span class="p">}}</span>&lt;/li&gt;
-<span class="p">{%</span><span class="w"> </span><span class="nt">endfor</span><span class="w"> </span><span class="p">%}</span>
+<span class="cp">{%</span><span class="w"> </span><span class="nt">for</span><span class="w"> </span><span class="nv">entry</span><span class="w"> </span><span class="nt">in</span><span class="w"> </span><span class="nv">item</span><span class="p">.</span><span class="nv">subfolderitems</span><span class="w"> </span><span class="cp">%}</span>
+&lt;li&gt;<span class="cp">{{</span><span class="nv">entry</span><span class="p">.</span><span class="nv">page</span><span class="cp">}}</span>&lt;/li&gt;
+<span class="cp">{%</span><span class="w"> </span><span class="nt">endfor</span><span class="w"> </span><span class="cp">%}</span>
 &lt;/ul&gt;
-<span class="p">{%</span><span class="w"> </span><span class="nt">endfor</span><span class="w"> </span><span class="p">%}</span>
+<span class="cp">{%</span><span class="w"> </span><span class="nt">endfor</span><span class="w"> </span><span class="cp">%}</span>
 </code></pre></div></div>
 
 <p><strong>Result:</strong></p>
@@ -278,7 +278,7 @@ since you can format the code samples with
 
 <p><strong>Markdown:</strong></p>
 
-<div class="language-liquid highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{{</span><span class="w"> </span><span class="nv">site</span><span class="p">.</span><span class="nv">data</span><span class="p">.</span><span class="nv">samplelist</span><span class="p">.</span><span class="nv">myref</span><span class="w"> </span><span class="p">}}</span>
+<div class="language-liquid highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">{{</span><span class="w"> </span><span class="nv">site</span><span class="p">.</span><span class="nv">data</span><span class="p">.</span><span class="nv">samplelist</span><span class="p">.</span><span class="nv">myref</span><span class="w"> </span><span class="cp">}}</span>
 </code></pre></div></div>
 
 <p><strong>Result:</strong></p>
@@ -335,7 +335,7 @@ zero
 
 <p><strong>Markdown + Liquid:</strong></p>
 
-<div class="language-liquid highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{{</span><span class="w"> </span><span class="nv">site</span><span class="p">.</span><span class="nv">data</span><span class="p">.</span><span class="nv">samplelist</span><span class="p">.</span><span class="nv">numbercolors</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nv">properties</span><span class="w"> </span><span class="p">}}</span>
+<div class="language-liquid highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">{{</span><span class="w"> </span><span class="nv">site</span><span class="p">.</span><span class="nv">data</span><span class="p">.</span><span class="nv">samplelist</span><span class="p">.</span><span class="nv">numbercolors</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nv">properties</span><span class="w"> </span><span class="cp">}}</span>
 </code></pre></div></div>
 
 <p><strong>Result:</strong></p>
@@ -375,11 +375,11 @@ red
 <p><strong>Markdown + Liquid:</strong></p>
 
 <div class="language-liquid highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;ul&gt;
-<span class="p">{%</span><span class="w"> </span><span class="nt">for</span><span class="w"> </span><span class="nv">sec</span><span class="w"> </span><span class="nt">in</span><span class="w"> </span><span class="nv">site.data.samplelist.mypages</span><span class="w"> </span><span class="p">%}</span>
-<span class="p">{%</span><span class="w"> </span><span class="kr">if</span><span class="w"> </span><span class="nv">sec</span><span class="p">.</span><span class="nv">audience</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">"writers"</span><span class="w"> </span><span class="p">%}</span>
-&lt;li&gt;<span class="p">{{</span><span class="nv">sec</span><span class="p">.</span><span class="nv">url</span><span class="p">}}</span>&lt;/li&gt;
-<span class="p">{%</span><span class="w"> </span><span class="kr">endif</span><span class="w"> </span><span class="p">%}</span>
-<span class="p">{%</span><span class="w"> </span><span class="nt">endfor</span><span class="w"> </span><span class="p">%}</span>
+<span class="cp">{%</span><span class="w"> </span><span class="nt">for</span><span class="w"> </span><span class="nv">sec</span><span class="w"> </span><span class="nt">in</span><span class="w"> </span><span class="nv">site</span><span class="p">.</span><span class="nv">data</span><span class="p">.</span><span class="nv">samplelist</span><span class="p">.</span><span class="nv">mypages</span><span class="w"> </span><span class="cp">%}</span>
+<span class="cp">{%</span><span class="w"> </span><span class="nt">if</span><span class="w"> </span><span class="nv">sec</span><span class="p">.</span><span class="nv">audience</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">"writers"</span><span class="w"> </span><span class="cp">%}</span>
+&lt;li&gt;<span class="cp">{{</span><span class="nv">sec</span><span class="p">.</span><span class="nv">url</span><span class="cp">}}</span>&lt;/li&gt;
+<span class="cp">{%</span><span class="w"> </span><span class="nt">endif</span><span class="w"> </span><span class="cp">%}</span>
+<span class="cp">{%</span><span class="w"> </span><span class="nt">endfor</span><span class="w"> </span><span class="cp">%}</span>
 &lt;/ul&gt;
 
 </code></pre></div></div>
@@ -412,11 +412,11 @@ red
 <p>Now let’s adjust the condition just a little. Let’s add a second condition so that the <code class="language-plaintext highlighter-rouge">audience</code> property has to be <code class="language-plaintext highlighter-rouge">writers</code> and the <code class="language-plaintext highlighter-rouge">product</code> property has to be gizmo. This is how you would write it:</p>
 
 <div class="language-liquid highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;ul&gt;
-<span class="p">{%</span><span class="w"> </span><span class="nt">for</span><span class="w"> </span><span class="nv">sec</span><span class="w"> </span><span class="nt">in</span><span class="w"> </span><span class="nv">site.data.samplelist.mypages</span><span class="w"> </span><span class="p">%}</span>
-<span class="p">{%</span><span class="w"> </span><span class="kr">if</span><span class="w"> </span><span class="nv">sec</span><span class="p">.</span><span class="nv">audience</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">"writers"</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="nv">sec</span><span class="p">.</span><span class="nv">product</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">"gizmo"</span><span class="w"> </span><span class="p">%}</span>
-&lt;li&gt;<span class="p">{{</span><span class="nv">sec</span><span class="p">.</span><span class="nv">url</span><span class="p">}}</span>&lt;/li&gt;
-<span class="p">{%</span><span class="w"> </span><span class="kr">endif</span><span class="w"> </span><span class="p">%}</span>
-<span class="p">{%</span><span class="w"> </span><span class="nt">endfor</span><span class="w"> </span><span class="p">%}</span>
+<span class="cp">{%</span><span class="w"> </span><span class="nt">for</span><span class="w"> </span><span class="nv">sec</span><span class="w"> </span><span class="nt">in</span><span class="w"> </span><span class="nv">site</span><span class="p">.</span><span class="nv">data</span><span class="p">.</span><span class="nv">samplelist</span><span class="p">.</span><span class="nv">mypages</span><span class="w"> </span><span class="cp">%}</span>
+<span class="cp">{%</span><span class="w"> </span><span class="nt">if</span><span class="w"> </span><span class="nv">sec</span><span class="p">.</span><span class="nv">audience</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">"writers"</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="nv">sec</span><span class="p">.</span><span class="nv">product</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">"gizmo"</span><span class="w"> </span><span class="cp">%}</span>
+&lt;li&gt;<span class="cp">{{</span><span class="nv">sec</span><span class="p">.</span><span class="nv">url</span><span class="cp">}}</span>&lt;/li&gt;
+<span class="cp">{%</span><span class="w"> </span><span class="nt">endif</span><span class="w"> </span><span class="cp">%}</span>
+<span class="cp">{%</span><span class="w"> </span><span class="nt">endfor</span><span class="w"> </span><span class="cp">%}</span>
 &lt;/ul&gt;
 </code></pre></div></div>
 

@@ -1,4 +1,4 @@
-I"A„<h2 id="full-code-demo-of-content-api">Full code demo of content API</h2>
+I"|„<h2 id="full-code-demo-of-content-api">Full code demo of content API</h2>
 
 <p>You can create a help API that developers can use to pull in content.</p>
 
@@ -81,12 +81,12 @@ search: exclude
 {
 "entries":
 [
-<span class="p">{%</span><span class="w"> </span><span class="nt">for</span><span class="w"> </span><span class="nv">page</span><span class="w"> </span><span class="nt">in</span><span class="w"> </span><span class="nv">site.tooltips</span><span class="w"> </span><span class="p">%}</span>
+<span class="cp">{%</span><span class="w"> </span><span class="nt">for</span><span class="w"> </span><span class="nv">page</span><span class="w"> </span><span class="nt">in</span><span class="w"> </span><span class="nv">site</span><span class="p">.</span><span class="nv">tooltips</span><span class="w"> </span><span class="cp">%}</span>
 {
-"doc_id": "<span class="p">{{</span><span class="w"> </span><span class="nv">page</span><span class="p">.</span><span class="nv">doc_id</span><span class="w"> </span><span class="p">}}</span>",
-"body": "<span class="p">{{</span><span class="w"> </span><span class="nv">page</span><span class="p">.</span><span class="nv">content</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">strip_newlines</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">replace</span><span class="p">:</span><span class="w"> </span><span class="s1">'\'</span><span class="p">,</span><span class="w"> </span><span class="s1">'\\\\'</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">replace</span><span class="p">:</span><span class="w"> </span><span class="s1">'"'</span><span class="p">,</span><span class="w"> </span><span class="s1">'\\"'</span><span class="w"> </span><span class="p">}}</span>"
-} <span class="p">{%</span><span class="w"> </span><span class="kr">unless</span><span class="w"> </span><span class="nb">forloop.last</span><span class="w"> </span><span class="p">%}</span>,<span class="p">{%</span><span class="w"> </span><span class="kr">endunless</span><span class="w"> </span><span class="p">%}</span>
-<span class="p">{%</span><span class="w"> </span><span class="nt">endfor</span><span class="w"> </span><span class="p">%}</span>
+"doc_id": "<span class="cp">{{</span><span class="w"> </span><span class="nv">page</span><span class="p">.</span><span class="nv">doc_id</span><span class="w"> </span><span class="cp">}}</span>",
+"body": "<span class="cp">{{</span><span class="w"> </span><span class="nv">page</span><span class="p">.</span><span class="nv">content</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">strip_newlines</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">replace</span><span class="p">:</span><span class="w"> </span><span class="s1">'\'</span><span class="p">,</span><span class="w"> </span><span class="s1">'\\\\'</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">replace</span><span class="p">:</span><span class="w"> </span><span class="s1">'"'</span><span class="p">,</span><span class="w"> </span><span class="s1">'\\"'</span><span class="w"> </span><span class="cp">}}</span>"
+} <span class="cp">{%</span><span class="w"> </span><span class="nt">unless</span><span class="w"> </span><span class="nb">forloop.last</span><span class="w"> </span><span class="cp">%}</span>,<span class="cp">{%</span><span class="w"> </span><span class="nt">endunless</span><span class="w"> </span><span class="cp">%}</span>
+<span class="cp">{%</span><span class="w"> </span><span class="nt">endfor</span><span class="w"> </span><span class="cp">%}</span>
 ]
 }
 
@@ -187,25 +187,25 @@ search: exclude
 
 <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">url</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">tooltips.json</span><span class="dl">"</span><span class="p">;</span>
 
-         <span class="nx">$</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span> <span class="nx">url</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span> <span class="nx">data</span> <span class="p">)</span> <span class="p">{</span>
+         <span class="nx">$</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span> <span class="nx">url</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span> <span class="nx">data</span> <span class="p">)</span> <span class="p">{</span>
 
           <span class="cm">/* Bootstrap popover text is defined inside a data-content attribute inside an element. That's
           why I'm using attr here. If you just want to insert content on the page, use append and remove the data-content argument from the parentheses.*/</span>
 
-             <span class="nx">$</span><span class="p">.</span><span class="nx">each</span><span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">entries</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">i</span><span class="p">,</span> <span class="nx">page</span><span class="p">)</span> <span class="p">{</span>
-                 <span class="k">if</span> <span class="p">(</span><span class="nx">page</span><span class="p">.</span><span class="nx">doc_id</span> <span class="o">==</span> <span class="dl">"</span><span class="s2">basketball</span><span class="dl">"</span><span class="p">)</span> <span class="p">{</span>
-                     <span class="nx">$</span><span class="p">(</span> <span class="dl">"</span><span class="s2">#basketball</span><span class="dl">"</span> <span class="p">).</span><span class="nx">attr</span><span class="p">(</span> <span class="dl">"</span><span class="s2">data-content</span><span class="dl">"</span><span class="p">,</span> <span class="nx">page</span><span class="p">.</span><span class="nx">body</span> <span class="p">);</span>
+             <span class="nx">$</span><span class="p">.</span><span class="nf">each</span><span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">entries</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">i</span><span class="p">,</span> <span class="nx">page</span><span class="p">)</span> <span class="p">{</span>
+                 <span class="k">if </span><span class="p">(</span><span class="nx">page</span><span class="p">.</span><span class="nx">doc_id</span> <span class="o">==</span> <span class="dl">"</span><span class="s2">basketball</span><span class="dl">"</span><span class="p">)</span> <span class="p">{</span>
+                     <span class="nf">$</span><span class="p">(</span> <span class="dl">"</span><span class="s2">#basketball</span><span class="dl">"</span> <span class="p">).</span><span class="nf">attr</span><span class="p">(</span> <span class="dl">"</span><span class="s2">data-content</span><span class="dl">"</span><span class="p">,</span> <span class="nx">page</span><span class="p">.</span><span class="nx">body</span> <span class="p">);</span>
                  <span class="p">}</span>
 
-                 <span class="k">if</span> <span class="p">(</span><span class="nx">page</span><span class="p">.</span><span class="nx">doc_id</span> <span class="o">==</span> <span class="dl">"</span><span class="s2">baseball</span><span class="dl">"</span><span class="p">)</span> <span class="p">{</span>
-                     <span class="nx">$</span><span class="p">(</span> <span class="dl">"</span><span class="s2">#baseball</span><span class="dl">"</span> <span class="p">).</span><span class="nx">attr</span><span class="p">(</span> <span class="dl">"</span><span class="s2">data-content</span><span class="dl">"</span><span class="p">,</span> <span class="nx">page</span><span class="p">.</span><span class="nx">body</span> <span class="p">);</span>
+                 <span class="k">if </span><span class="p">(</span><span class="nx">page</span><span class="p">.</span><span class="nx">doc_id</span> <span class="o">==</span> <span class="dl">"</span><span class="s2">baseball</span><span class="dl">"</span><span class="p">)</span> <span class="p">{</span>
+                     <span class="nf">$</span><span class="p">(</span> <span class="dl">"</span><span class="s2">#baseball</span><span class="dl">"</span> <span class="p">).</span><span class="nf">attr</span><span class="p">(</span> <span class="dl">"</span><span class="s2">data-content</span><span class="dl">"</span><span class="p">,</span> <span class="nx">page</span><span class="p">.</span><span class="nx">body</span> <span class="p">);</span>
                  <span class="p">}</span>
-                 <span class="k">if</span> <span class="p">(</span><span class="nx">page</span><span class="p">.</span><span class="nx">doc_id</span> <span class="o">==</span> <span class="dl">"</span><span class="s2">football</span><span class="dl">"</span><span class="p">)</span> <span class="p">{</span>
-                     <span class="nx">$</span><span class="p">(</span> <span class="dl">"</span><span class="s2">#football</span><span class="dl">"</span> <span class="p">).</span><span class="nx">attr</span><span class="p">(</span> <span class="dl">"</span><span class="s2">data-content</span><span class="dl">"</span><span class="p">,</span> <span class="nx">page</span><span class="p">.</span><span class="nx">body</span> <span class="p">);</span>
+                 <span class="k">if </span><span class="p">(</span><span class="nx">page</span><span class="p">.</span><span class="nx">doc_id</span> <span class="o">==</span> <span class="dl">"</span><span class="s2">football</span><span class="dl">"</span><span class="p">)</span> <span class="p">{</span>
+                     <span class="nf">$</span><span class="p">(</span> <span class="dl">"</span><span class="s2">#football</span><span class="dl">"</span> <span class="p">).</span><span class="nf">attr</span><span class="p">(</span> <span class="dl">"</span><span class="s2">data-content</span><span class="dl">"</span><span class="p">,</span> <span class="nx">page</span><span class="p">.</span><span class="nx">body</span> <span class="p">);</span>
                  <span class="p">}</span>
 
-                 <span class="k">if</span> <span class="p">(</span><span class="nx">page</span><span class="p">.</span><span class="nx">doc_id</span> <span class="o">==</span> <span class="dl">"</span><span class="s2">soccer</span><span class="dl">"</span><span class="p">)</span> <span class="p">{</span>
-                     <span class="nx">$</span><span class="p">(</span> <span class="dl">"</span><span class="s2">#soccer</span><span class="dl">"</span> <span class="p">).</span><span class="nx">attr</span><span class="p">(</span> <span class="dl">"</span><span class="s2">data-content</span><span class="dl">"</span><span class="p">,</span> <span class="nx">page</span><span class="p">.</span><span class="nx">body</span> <span class="p">);</span>
+                 <span class="k">if </span><span class="p">(</span><span class="nx">page</span><span class="p">.</span><span class="nx">doc_id</span> <span class="o">==</span> <span class="dl">"</span><span class="s2">soccer</span><span class="dl">"</span><span class="p">)</span> <span class="p">{</span>
+                     <span class="nf">$</span><span class="p">(</span> <span class="dl">"</span><span class="s2">#soccer</span><span class="dl">"</span> <span class="p">).</span><span class="nf">attr</span><span class="p">(</span> <span class="dl">"</span><span class="s2">data-content</span><span class="dl">"</span><span class="p">,</span> <span class="nx">page</span><span class="p">.</span><span class="nx">body</span> <span class="p">);</span>
                  <span class="p">}</span>
 
 
@@ -237,8 +237,8 @@ search: exclude
 </span><span class="o">&lt;</span><span class="nx">script</span> <span class="nx">src</span><span class="o">=</span><span class="dl">"</span><span class="s2">https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js</span><span class="dl">"</span><span class="o">&gt;&lt;</span><span class="sr">/script</span><span class="err">&gt;
 </span>
 <span class="o">&lt;</span><span class="nx">script</span> <span class="nx">type</span><span class="o">=</span><span class="dl">"</span><span class="s2">text/javascript</span><span class="dl">"</span><span class="o">&gt;</span>
-<span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">ready</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span>
-    <span class="nx">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">[data-toggle="popover"]</span><span class="dl">'</span><span class="p">).</span><span class="nx">popover</span><span class="p">({</span>
+<span class="nf">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nf">ready</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span>
+    <span class="nf">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">[data-toggle="popover"]</span><span class="dl">'</span><span class="p">).</span><span class="nf">popover</span><span class="p">({</span>
         <span class="na">placement</span> <span class="p">:</span> <span class="dl">'</span><span class="s1">right</span><span class="dl">'</span><span class="p">,</span>
         <span class="na">trigger</span><span class="p">:</span> <span class="dl">'</span><span class="s1">hover</span><span class="dl">'</span><span class="p">,</span>
         <span class="na">html</span><span class="p">:</span> <span class="kc">true</span>

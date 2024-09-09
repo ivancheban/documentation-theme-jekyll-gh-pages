@@ -81,9 +81,9 @@
     <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"js/jekyll-search.js"</span> <span class="na">type=</span><span class="s">"text/javascript"</span><span class="nt">&gt;&lt;/script&gt;</span>
     <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span><span class="nt">&gt;</span>
-            <span class="nx">SimpleJekyllSearch</span><span class="p">.</span><span class="nx">init</span><span class="p">({</span>
-                <span class="na">searchInput</span><span class="p">:</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">'</span><span class="s1">search-input</span><span class="dl">'</span><span class="p">),</span>
-                <span class="na">resultsContainer</span><span class="p">:</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">'</span><span class="s1">results-container</span><span class="dl">'</span><span class="p">),</span>
+            <span class="nx">SimpleJekyllSearch</span><span class="p">.</span><span class="nf">init</span><span class="p">({</span>
+                <span class="na">searchInput</span><span class="p">:</span> <span class="nb">document</span><span class="p">.</span><span class="nf">getElementById</span><span class="p">(</span><span class="dl">'</span><span class="s1">search-input</span><span class="dl">'</span><span class="p">),</span>
+                <span class="na">resultsContainer</span><span class="p">:</span> <span class="nb">document</span><span class="p">.</span><span class="nf">getElementById</span><span class="p">(</span><span class="dl">'</span><span class="s1">results-container</span><span class="dl">'</span><span class="p">),</span>
                 <span class="na">dataSource</span><span class="p">:</span> <span class="dl">'</span><span class="s1">search.json</span><span class="dl">'</span><span class="p">,</span>
                 <span class="na">searchResultTemplate</span><span class="p">:</span> <span class="dl">'</span><span class="s1">&lt;li&gt;&lt;a href="{url}" title="Search configuration"&gt;{title}&lt;/a&gt;&lt;/li&gt;</span><span class="dl">'</span><span class="p">,</span>
     <span class="na">noResultsText</span><span class="p">:</span> <span class="dl">'</span><span class="s1">No results found.</span><span class="dl">'</span><span class="p">,</span>
