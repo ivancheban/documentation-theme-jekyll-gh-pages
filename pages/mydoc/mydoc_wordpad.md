@@ -4,7 +4,7 @@ tags: [wordpad]
 keywords: search
 summary: "How to use WordPad for inserting an object, drawing and inserting a Paint image, and sending the document via email"
 sidebar: mydoc_sidebar
-permalink: mydoc_query_preparation.html
+permalink: mydoc_wordpad.html
 folder: mydoc
 ---
 
