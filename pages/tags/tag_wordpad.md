@@ -2,7 +2,7 @@
 title: "WordPad pages"
 tagName: wordpad
 search: exclude
-permalink: tag_delphi.html
+permalink: tag_wordpad.html
 sidebar: mydoc_sidebar
 folder: tags
 ---
