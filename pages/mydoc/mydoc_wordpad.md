@@ -28,9 +28,13 @@ The Paint bitmap image window opens.
 
 ## Drawing and inserting a Paint drawing
 
-Open Paint separately
-Create your drawing in Paint
-Select the entire drawing (Ctrl+A)
+To draw an image in Paint and insert it in WordPad:
+
+1. Create your drawing in the Paint window.
+
+    {% include image.html file="paint-drawing.png" caption="Drawing in Paint" %}
+
+2. Select the entire drawing by pressing <keyboard>Ctrl</keyboard>+<keyboard>A</keyboard>
 Copy the drawing (Ctrl+C)
 Switch back to WordPad
 Place the cursor where you want to insert the drawing
