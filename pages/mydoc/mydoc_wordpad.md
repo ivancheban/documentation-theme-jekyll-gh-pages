@@ -34,27 +34,40 @@ To draw an image in Paint and insert it in WordPad:
 
     {% include image.html file="paint-drawing.png" caption="Drawing in Paint" %}
 
-2. Select the entire drawing by pressing <keyboard>Ctrl</keyboard>+<keyboard>A</keyboard>
-Copy the drawing (Ctrl+C)
-Switch back to WordPad
-Place the cursor where you want to insert the drawing
-Paste the drawing (Ctrl+V)
+1. Select the entire drawing by pressing **Ctrl+A**.
+
+1. Copy the drawing by pressing **Ctrl+C**.
+
+1. Switch back to the WordPad window.
+
+1. Place the cursor where you want to insert the drawing.
+
+1. Paste the drawing by pressing **Ctrl+V**.
 
 ## Saving the document to the desktop
 
-Click on the "File" menu
-Select "Save As"
-Choose "Desktop" as the save location
-Enter a name for your document
-Click "Save"
+To save the document in WordPad to your desktop:
+
+1. From the **File** menu, select **Save as**.
+
+1. Select the format of your document. By default, WordPad saves your document in the Rich Text format.
+
+    {% include image.html file="save-as.png" caption="Save as menu in WordPad" %}
+
+1. Select **Desktop** as the save location.
+
+1. Enter a name for your document.
+
+1. Click **Save**.
 
 ## Sending the document via email from WordPad
 
-Click on the "File" menu
-Select "Share"
-Choose "Email"
-Select "Send as attachment"
-Your default email client will open with the document attached
-Fill in the recipient's email address, subject, and message
-Click "Send"
+To send the document via email from the WordPad window:
 
+1. From the **File** menu, select **Send in email**. Your default email client opens with the document attached.
+
+    {% include image.html file="email.png" caption="Default email client with the attached document" %}
+
+1. Fill in the recipient's email address, subject, and message.
+
+1. Click **Send**.
