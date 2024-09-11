@@ -8,8 +8,6 @@ permalink: mydoc_query_preparation.html
 folder: mydoc
 ---
 
-# Query Preparation
-
 Query preparation is an optional step that precedes query execution. Query preparation sends the `Customer Query` operator and its parameters, if any, to the BDE (Borland Database Engine) for parsing, resource allocation, and optimization.
 
 The BDE notifies the database server about the query preparation. The server can also allocate resources for the query.
