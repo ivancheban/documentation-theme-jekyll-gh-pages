@@ -45,7 +45,7 @@ entries:
       output: web, pdf
 
     - title: Query Preparation
-      url: /query_preparation.html
+      url: /mydoc_query_preparation.html
       output: web
 
   - title: Release Notes

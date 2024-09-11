@@ -4,7 +4,7 @@ tags: [delphi]
 keywords: search
 summary: "Query preparation in Delphi"
 sidebar: mydoc_sidebar
-permalink: query-preparation.html
+permalink: mydoc_query_preparation.html
 folder: mydoc
 ---
 
