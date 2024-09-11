@@ -1,6 +1,6 @@
 ---
 title: Query Preparation
-tags: [formatting]
+tags: [delphi]
 keywords: search
 summary: "Query preparation in Delphi"
 sidebar: mydoc_sidebar
