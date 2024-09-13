@@ -44,11 +44,11 @@ entries:
       url: /mydoc_support.html
       output: web, pdf
 
-    - title: Query Preparation
+    - title: Query preparation
       url: /mydoc_query_preparation.html
       output: web
 
-    - title: Wordpad Instructions
+    - title: Wordpad instructions
       url: /mydoc_wordpad.html
       output: web
 
