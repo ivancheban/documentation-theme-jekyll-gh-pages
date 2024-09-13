@@ -1,5 +1,5 @@
 ---
-title: WordPad Instructions
+title: WordPad instructions
 tags: [wordpad]
 keywords: search
 summary: "How to use WordPad for inserting an object, drawing and inserting a Paint image, and sending the document via email"

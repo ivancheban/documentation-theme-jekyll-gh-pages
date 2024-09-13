@@ -1,5 +1,5 @@
 ---
-title: Query Preparation
+title: Query preparation
 tags: [delphi]
 keywords: search
 summary: "Query preparation in Delphi"
